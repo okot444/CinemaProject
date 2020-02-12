@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Edit users</title>
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script href="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/styleserv.css' %}">
+</head>
+<body>
+<header>
+<div class="row no-gutters">
+	<div class="col-sm-1">
+        <form action = "{% url 'login' %}" method = "get">
+    <input type="submit" class="btn btn-primary" value="Выйти"><br>
+            </form>
+    </div>
+	<div class="col-sm-10"><h1 class="display-4" >Меню редактирования пользователей</h1></div>
+	<div class="col-sm-1"></div>
+
+</div>
+</header>
+<div class="container-fluid">
+
+
+<table class="table table-hover">
+  <thead>
+    <tr id="first">
+      <th scope="col" id="time">Логин</th>
+      <th scope="col" id="name">Пароль</th>
+      <th scope="col">Роль</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for user in userlist %}
+    <tr>
+    	<form class="form-inline" action="{% url 'EditUser' %}">
+  		<td><input type="numbers" class="input-small" name ="login" value="{{ user.0}}"></td>
+        <td><input type="text" class="input-small" name ="password" value="{{ user.1}}"></td>
+        <td><input type="text" class="input-small" name ="role" value="{{ user.2}}" readonly></td>
+  		<td><button type="submit" class="btn" name="id" value="{{ user.3 }}">Редактировать</button></td>
+		</form>
+        <form class="form-inline" action="{% url 'DelUser' %}">
+  		<td><button type="submit" class="btn" name="id" value="{{ user.3 }}${{ user.2 }}">Удалить</button></td>
+		</form>
+    </tr>
+  {% endfor %}
+    <tr>
+    	<form action="{% url 'AddUser' %}" class="form-inline" >
+  		<td><input type="numbers" class="input-small" placeholder="Login" name ="login"></td>
+        <td><input type="text" class="input-small" placeholder="Password" name ="password"></td>
+        <td>
+        	<select class="form-control" name ="role">
+      			<option>Manager</option>
+      			<option>Admin</option>
+	  		</select>
+		</td>
+  			<td><button type="submit" class="btn">Добавить</button></td>
+		</form>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

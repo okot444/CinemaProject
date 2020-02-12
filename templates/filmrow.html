@@ -1,0 +1,14 @@
+ <tr>
+    	<form class="form-inline" action="{% url 'EDFilm' %}">
+            <td><input type="text" class="input-small" name="name" value="{{ id }}"></td>
+  			<td><input type="text" class="input-small" name="name" value="{{ name }}"></td>
+            <td><input type="text" class="input-small" name="genre" value="{{ genre }}"></td>
+  			<td><input type="text" class="input" name="dis" value="{{ dis }}"></td>
+  			<td><input type="text" class="input-small" name="poster" value="{{ poster }}"></td>
+            <td><input type="text" class="input-small" name="length" value="{{ length}}"></td>
+
+		</form>
+     <form class="form-inline" action="{% url 'delFilm' %}">
+  			<td><button type="submit" class="btn" name="ID" value="{{ id }}">Удалить</button></td>
+		</form>
+    </tr>

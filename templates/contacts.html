@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+ <head>
+    <title>Контакты</title>
+
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script href="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <style>
+        @import url('https://fonts.googleapis.com/css?family=Comfortaa&subset=cyrillic');
+      </style>
+  </head>
+  <body>
+
+  	<header>
+  		<div class="container-fluid">
+  			<div class="row no-gutters">
+
+  				<div class="col-sm" id="address">
+  				
+  					<a href="{{ maplink }}"  class="btn btn-large btn-block" type="button" target="_blank" id="map">Схема проезда</a>
+  				</div>
+  				
+  				<div class="col-sm-6" align="center">
+  					<h1>Кинотеатр "Paramount"</h1>
+  				</div>
+  				<div class="col-sm">
+                    <p>Режим работы: пн. - вс. : 10:00 - 22:00</p>
+  					<p>Aдрес: метро Парнас , улица Николая Рубцова д. 12</p>
+  					<p>Телефон: 8-100-1001010</p>
+  				</div>
+  			</div>
+    	</div>
+    	<div class="container">
+    		
+    		<div class="row">
+    		<div class="col-sm">
+    				<a href="index" id="navbar"><h3>Главная</h3></a>
+    		</div>
+    		<div class="col-sm">
+    			<a href="timetable" id="navbar"><h3>Расписание</h3></a>
+    		</div>
+    		<div class="col-sm">
+    			<a href="contacts" id="curr"><h3>O нас</h3></a>
+    		</div>
+    		</div>
+    		
+    	</div>
+	</header>
+	<p>
+<ul class="list-unstyled">
+	<li><h2><strong>Контакты</strong></h2></li>
+	<br>
+	<ul class="list-unstyled">
+		<li><h3>	Адрес: метро Парнас , улица Николая Рубцова д. 12</h3></li>
+
+		<li><h3>	Телефон: 8-100-1001010</h3></li>
+	</ul>
+</ul>
+</p>
+
+</body>
+</html>

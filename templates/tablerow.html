@@ -1,0 +1,30 @@
+<style>
+    input{
+    border: none;
+    background: gold;
+    outline:none;
+    padding:0;
+    width: 100%;
+    height: 100%;
+}
+    input:hover
+    {
+        background: cornflowerblue;
+    }
+    tr{
+         font-size: 1.5em;
+    }
+</style>
+
+<tr>
+      <th scope="row" id="time">{{ time }}</th>
+      <td id="name">
+          <form action = "{% url 'film' %}" method = "get"> {# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! href vs url #}
+                <input type="submit" name="film" value="{{ fname }}"><br>
+               <input type="text" name="id" value="{{ id }}" style="width: 0px;height:0px">
+            </form>
+          </td>
+      <td>{{ price }}</td>
+      <td>{{ hall }}</td>
+
+    </tr>

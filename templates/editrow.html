@@ -1,0 +1,12 @@
+<tr>
+    	<form class="form-inline" action="{% url 'EDTable' %}">
+  			<td><input type="numbers" class="input-small" name="time" value ="{{ time }}"></td>
+            <td><input type="text" class="input-small" name="hall" value ="{{ hall }}"></td>
+            <td><input type="numbers" class="input-small" name="price" value ="{{ price }}"></td>
+            <td><input type="text" class="input-small" name="fname" value ="{{ name }} "></td>
+
+		</form>
+    <form class="form-inline" action="{% url 'delTable' %}">
+  			<td><button type="submit" class="btn" name="id" value="{{ id }}${{ dat }}${{ hall }}">Удалить</button></td>
+		</form>
+    </tr>

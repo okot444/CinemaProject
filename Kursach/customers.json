@@ -1,0 +1,14 @@
+{
+    "0": {
+        "login": "nick",
+        "nick": "nick",
+        "password": "passcode",
+        "tickets": {
+            "0": {
+                "film": "film",
+                "hall": "hall",
+                "time": "time"
+            }
+        }
+    }
+}

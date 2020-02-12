@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Edit table</title>
+   <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script href="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/styleserv.css' %}">
+</head>
+<body>
+<header>
+<div class="row no-gutters">
+	<div class="col-sm-1">
+        <form action = "{% url 'login' %}" method = "get">
+    <input type="submit" class="btn btn-primary" value="Выйти"><br>
+            </form>
+    </div>
+	<div class="col-sm-9"><h1 class="display-4" >Расписание</h1></div>
+	<div class="col-sm-2">
+        <form action = "{% url 'films' %}" method = "get">
+    <input type="submit" class="btn btn-primary" value="Перейти к фильмам"><br>
+            </form>
+    </div>
+
+</div>
+</header>
+<div class="container-fluid">
+
+
+{% for date in table %}
+
+
+    <table class="table table-hover">
+     <tr>
+	<h2>
+		{{  date.0}}
+	</h2>
+    </tr>
+        <thead>
+        <tr>
+             <form class="form-inline" action="{% url 'DelDate' %}">
+                <button type="submit" class="btn" name="date" value="{{ date.0 }}">Удалить дату</button>
+            </form>
+        </tr>
+        <tr id="first">
+      <th scope="col" id="time">Время</th>
+      <th scope="col" id="name">Зал</th>
+      <th scope="col">Цена</th>
+      <th scope="col">Фильм</th>
+    </tr>
+      </thead>
+      <tbody>
+       {% for film in date %}
+           {% if not forloop.first %}
+        {% include "editrow.html" with time=film.0 name=film.1 price=film.2 hall=film.3 id=film.4 dat=date.0 %}
+           {% endif %}
+    {% endfor %}
+
+    <tr>
+    	<form class="form-inline" action="{% url 'add' %}">
+  			<td><input type="numbers" class="input-small" placeholder="Время" name="time"></td>
+  			<td>
+                <select class="form-control" name ="hall">
+      			    <option>Большой</option>
+      			    <option>Малый</option>
+	  		    </select>
+            </td>
+  			<td><input type="numbers" class="input-small" placeholder="Цена" name="price"></td>
+  			<td>
+                <select class="form-control" placeholder="ID" name="fname">
+      			{% for film in filmlist %}
+                    <option>{{ film }}</option>
+                {% endfor %}
+	  		    </select>
+
+
+            </td>
+
+  			<td><button type="submit" class="btn" name="date" value="{{ date.0 }}">Добавить</button></td>
+		</form>
+    </tr>
+      {% endfor %}
+
+  </tbody>
+</table>
+<form class="form-inline" action="{% url 'AddDate' %}" style="justify-content: center">
+                <input type="text" class="input-small" placeholder="дд.мм.гггг" name="date">
+                <button type="submit" class="btn">Добавить дату</button>
+</form>
+</div>
+</body>
+</html>

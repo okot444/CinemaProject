@@ -1,0 +1,29 @@
+@charset utf-8;
+body
+{
+	text-align: center;
+	position: relative;
+}
+h1
+{
+	padding-left: 10;
+}
+.container-fluid
+{
+	position: absolute;
+	padding-top: 5%;
+  
+  
+}
+.form-inline
+{
+	 align-self:center; 
+}
+.col-sm-1
+{
+	margin-top:2%;
+}
+.col-sm-2
+{
+	margin-top:2%;
+}

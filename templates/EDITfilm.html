@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Edit film</title>
+   <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script href="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/styleserv.css' %}">
+</head>
+<body>
+<header>
+<div class="row no-gutters">
+	<div class="col-sm-1">
+        <form action = "{% url 'login' %}" method = "get">
+    <input type="submit" class="btn btn-primary" value="Выйти"><br>
+            </form>
+    </div>
+	<div class="col-sm-9"><h1 class="display-4" >Меню редактирования фильмов</h1></div>
+	<div class="col-sm-2">
+        <form action = "{% url 'Etable' %}" method = "get">
+    <input type="submit" class="btn btn-primary" value="Перейти к расписанию"><br>
+            </form>
+    </div>
+
+</div>
+</header>
+<div class="container-fluid">
+
+
+<table class="table table-hover">
+  <thead>
+    <tr id="first">
+        <th scope="col" id="time">ID</th>
+      <th scope="col" id="time">Название</th>
+        <th scope="col" id="time">Жанр</th>
+      <th scope="col" id="name">Описание</th>
+      <th scope="col">Постер</th>
+        <th scope="col">Продолжительность</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for film in flist %}
+      {% include "filmrow.html" with name=film.0 genre=film.1 dis=film.2 poster=film.3 id=film.4 length=film.5 %}
+  {% endfor %}
+    </tbody>
+</table>
+
+<table class="table table-hover">
+  <thead>
+    <tr id="first">
+      <th scope="col" id="time">Название</th>
+        <th scope="col" id="time">Жанр</th>
+      <th scope="col" id="name">Описание</th>
+      <th scope="col">Постер</th>
+        <th scope="col">Продолжительность</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    	<form class="form-inline" action="{% url 'addFilm' %}">
+  			<td><input type="text" class="input-small" placeholder="Название" name="name"></td>
+            <td><input type="text" class="input-small" placeholder="Жанр" name="genre"></td>
+  			<td><input type="text" class="input-small" placeholder="Описание" name="dis"></td>
+  			<td><input type="file" name="poster"></td>
+            <td><input type="text" class="input-small" placeholder="Продолжительность" name="length"></td>
+  			<td><button type="submit" class="btn">Загрузить</button></td>
+		</form>
+    </tr>
+    
+  </tbody>
+</table>
+</body>
+</html>

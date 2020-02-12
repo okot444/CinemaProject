@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Сайт кинотеатра</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="main">
+    <div class="page">
+        <header class="header">
+            <div class="container">
+                <div class="header--info" style="position: relative; margin-top:15px;">
+                    <div class="header--address">
+                        <span>Unknown</span>
+                        <span>Телефон: 000-000-000</span>
+                    </div>                                  
+                </div>
+            </header>
+            <ul class="mainMenu">
+                <li class="mainMenu--item active">
+                    <div class="mainMenu--label">
+                        <a href="/"><span>Главная</span></a>
+                    </div>
+                </li>
+                <li class="mainMenu--item ">
+                    <div class="mainMenu--label">
+                        <a href="/schedule/"><span>Расписание</span></a>
+                    </div>
+                </li>
+                <li class="mainMenu--item ">
+                    <div class="mainMenu--label">
+                        <a href="/contacts/"><span>Контакты</span></a>
+                    </div>
+                </li>
+            </ul>
+            <table class="table shuddle table-hover" width=100px>                   
+                <thead>
+                    <tr>
+                        <th>Сеанс</th>
+                        <th>Название</th>
+                        <th>Цена</th>
+                        <th>Зал</th>
+                        <th>Билеты</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>sdfsdf</td>
+                        <td>sdfsdf</td>
+                        <td>dfdfs</td>
+                        <td>sdfsdf</td>
+                        <td>sdfsdf</td>
+                    </tr>
+                    <tr>
+                        <td>sdfsdf</td>
+                        <td>sdfsd</td>
+                        <td>sfdsf</td>
+                        <td>sdfsf</td>
+                        <td>sdfsf</td>
+                    </tr>
+                    <tr>
+                        <td>sdfsdf</td>
+                        <td>sdfsdfsfd</td>
+                        <td>asfdsdf</td>
+                        <td>asdfasfafs</td>
+                        <td>asdfasfafs</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-xs-2" style="width:25%; float:right"> 
+             <div class='block'>      
+               <header>Календарь</header>   
+               <div class="body"><div class="datepicker"></div></div>            
+           </div>       
+       </div>    
+   </div>           
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <title>{{ filmname }}</title>
+
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script href="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+      <style>
+            #textcont
+            {
+                width: 100vw;
+                height: 100vh;
+            }
+      </style>
+
+  </head>
+  <body>
+  	<header>
+  		<div class="container-fluid">
+  			<div class="row no-gutters">
+
+  				<div class="col-sm" id="address">
+  				
+  					<a href="{{ maplink }}"  class="btn btn-large btn-block" type="button" target="_blank" id="map">Схема проезда</a>
+  				</div>
+  				
+  				<div class="col-sm-6" align="center">
+  					<h1>Кинотеатр "Paramount"</h1>
+  				</div>
+  				<div class="col-sm">
+                    <p>Режим работы: пн. - вс. : 10:00 - 22:00 </p>
+  					<p>Aдрес: метро Парнас , улица Николая Рубцова д. 12</p>
+  					<p>Телефон: 8-100-1001010</p>
+  				</div>
+  			</div>
+    	</div>
+    	<div class="container">
+    		
+    		<div class="row">
+    		<div class="col-sm">
+    				<a href="index" id="navbar"><h3>Главная</h3></a>
+    		</div>
+    		<div class="col-sm">
+    			<a href="timetable" id="navbar"><h3>Расписание</h3></a>
+    		</div>
+    		<div class="col-sm">
+    			<a href="contacts" id="navbar"><h3>Контакты</h3></a>
+    		</div>
+    		</div>
+    		
+    	</div>
+	</header>
+    <h2 id="filmname" class="display-4">{{ filmname }}</h2>
+  <div id="main" class="main">
+
+
+     <div class="row no-gutters">
+       <div id="textcont" class="col-sm-6 d-flex justify-content-start">
+
+         <p id="filmdiscription">
+             Продолжительнсть:{{ length }}<br>
+             Жанр:{{ genre }}<br>
+            {{ description }}
+         </p>
+           </div>
+       <div class="col-sm-6">
+         <image id="poster" src="{% static  postsrc  %}"></image>
+
+     </div>
+   
+  </div>
+  </body>
+</html>
