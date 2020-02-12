@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1214847d-39e1-445b-8748-288e8859e54b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Kursach/test_new_branch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kursach/return_to_master.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kursach/test_new_branch.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,18 +94,13 @@
         <counts>
           <entry key="git.branch.checkout.local" value="2" />
           <entry key="git.branch.create.new" value="1" />
+          <entry key="git.branch.delete.local" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Kursach/test_new_branch.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -618,10 +614,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Kursach/testfile.py">
+    <entry file="file://$PROJECT_DIR$/Kursach/testfile.py" />
+    <entry file="file://$PROJECT_DIR$/Kursach/test_new_branch.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Kursach/test_new_branch.py">
+    <entry file="file://$PROJECT_DIR$/Kursach/return_to_master.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
